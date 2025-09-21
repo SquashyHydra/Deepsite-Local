@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Epic MMO RPG</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Vanta.js Globe -->
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+</head>
+<body class="bg-gray-900 text-white">
+
+<!-- Navigation Bar -->
+<nav class="fixed w-full z-20 bg-opacity-90 backdrop-blur-md">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+    <a href="#" class="text-2xl font-bold">Epic MMO RPG</a>
+    <div class="hidden md:flex space-x-8">
+      <a href="index.html" class="hover:text-indigo-400 transition">Home</a>
+      <a href="about.html" class="hover:text-indigo-400 transition">About</a>
+      <a href="game.html" class="hover:text-indigo-400 transition">Gameplay</a>
+      <a href="contact.html" class="hover:text-indigo-400 transition">Contact</a>
+    </div>
+    <button id="menuBtn" class="md:hidden focus:outline-none">
+      <i data-feather="menu"></i>
+    </button>
+  </div>
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-gray-800">
+    <a href="index.html" class="block px-4 py-2 hover:bg-indigo-600">Home</a>
+    <a href="about.html" class="block px-4 py-2 hover:bg-indigo-600">About</a>
+    <a href="game.html" class="block px-4 py-2 hover:bg-indigo-600">Gameplay</a>
+    <a href="contact.html" class="block px-4 py-2 hover:bg-indigo-600">Contact</a>
+  </div>
+</nav>
+
+<!-- Hero Section with Vanta.js Globe -->
+<section id="hero" class="h-screen flex items-center justify-center relative">
+  <div class="absolute inset-0 bg-black opacity-50"></div>
+  <div class="relative z-10 text-center px-4">
+    <h1 class="text-5xl md:text-7xl font-extrabold mb-4" data-aos="fade-up">Epic MMO RPG</h1>
+    <p class="text-xl md:text-2xl mb-8" data-aos="fade-up" data-aos-delay="200">Embark on an endless adventure across mystical realms.</p>
+    <a href="#play" class="bg-indigo-600 hover:bg-indigo-700 text-white py-3 px-6 rounded-full font-semibold" data-aos="zoom-in" data-aos-delay="400">
+      Play Now
+      <i data-feather="arrow-right" class="inline-block ml-2"></i>
+    </a>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-20 bg-gray-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Game Features</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-gray-700 rounded-lg p-6 shadow-xl" data-aos="zoom-in" data-aos-delay="100">
+        <i data-feather="shield" class="w-12 h-12 mb-4 text-indigo-400"></i>
+        <h3 class="text-xl font-semibold mb-2">Dynamic Combat</h3>
+        <p>Real-time action with skill combos and elemental reactions.</p>
+      </div>
+      <div class="bg-gray-700 rounded-lg p-6 shadow-xl" data-aos="zoom-in" data-aos-delay="200">
+        <i data-feather="globe" class="w-12 h-12 mb-4 text-indigo-400"></i>
+        <h3 class="text-xl font-semibold mb-2">Massive World</h3>
+        <p>Explore 5 continents, each with unique quests and lore.</p>
+      </div>
+      <div class="bg-gray-700 rounded-lg p-6 shadow-xl" data-aos="zoom-in" data-aos-delay="300">
+        <i data-feather="users" class="w-12 h-12 mb-4 text-indigo-400"></i>
+        <h3 class="text-xl font-semibold mb-2">Co-op & PvP</h3>
+        <p>Team up with friends or battle rivals in epic arenas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section id="play" class="py-20 bg-indigo-600 text-center">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold mb-4" data-aos="fade-up">Ready to Join?</h2>
+    <p class="mb-8" data-aos="fade-up" data-aos-delay="100">Register now and start your quest.</p>
+    <a href="#" class="bg-white text-indigo-600 py-3 px-6 rounded-full font-semibold hover:bg-gray-200 transition" data-aos="zoom-in" data-aos-delay="200">
+      Register
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-800 py-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <p>&copy; 2025 Epic MMO RPG. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+// Feather Icons
+feather.replace();
+
+// AOS initialization
+AOS.init({
+  duration: 800,
+  once: true
+});
+
+// Mobile menu toggle
+document.getElementById('menuBtn').addEventListener('click', () => {
+  const menu = document.getElementById('mobileMenu');
+  menu.classList.toggle('hidden');
+});
+
+// Vanta.js Globe effect on hero section
+VANTA.GLOBE({
+  el: "#hero",
+  color: 0x2e3d49,
+  backgroundColor: 0x111b24,
+  points: 12.00,
+  maxDistance: 20.00,
+  spacing: 18.00
+});
+</script>
+</body>
+</html>

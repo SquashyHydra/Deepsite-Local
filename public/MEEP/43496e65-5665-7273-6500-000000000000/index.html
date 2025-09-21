@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineVerse - Premium Cinema Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('http://static.photos/cinema/1200x630/1') no-repeat center center;
+            background-size: cover;
+        }
+        
+        .movie-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .cinema-card {
+            transition: all 0.3s ease;
+        }
+        
+        .cinema-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .hero-text {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .movie-title {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .scroll-down {
+            animation: scrollDown 2s infinite;
+        }
+        
+        @keyframes scrollDown {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+            100% { transform: translateY(0); }
+        }
+        
+        .feature-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .feature-icon:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-black bg-opacity-90 backdrop-blur-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i data-feather="film" class="h-8 w-8 text-red-600"></i>
+                        <span class="ml-2 text-xl font-bold bg-gradient-to-r from-red-600 to-purple-600 bg-clip-text text-transparent">CineVerse</span>
+                    </div>
+                    <div class="hidden md:ml-10 md:flex md:space-x-8">
+                        <a href="#" class="text-white inline-flex items-center px-1 pt-1 border-b-2 border-red-600 text-sm font-medium">Home</a>
+                        <a href="#movies" class="text-gray-300 hover:text-white inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-gray-300 text-sm font-medium">Movies</a>
+                        <a href="#showtimes" class="text-gray-300 hover:text-white inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-gray-300 text-sm font-medium">Showtimes</a>
+                        <a href="#cinemas" class="text-gray-300 hover:text-white inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-gray-300 text-sm font-medium">Cinemas</a>
+                        <a href="#contact" class="text-gray-300 hover:text-white inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-gray-300 text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <button class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">
+                        Book Tickets
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg h-screen flex items-center justify-center relative">
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+        <div class="relative z-10 text-center px-4 max-w-4xl">
+            <h1 data-aos="fade-up" class="hero-text text-4xl md:text-6xl font-bold mb-6">Experience Cinema Like Never Before</h1>
+            <p data-aos="fade-up" data-aos-delay="200" class="text-xl md:text-2xl mb-8 text-gray-200">Premium seating, cutting-edge technology, and unforgettable entertainment</p>
+            <div data-aos="fade-up" data-aos-delay="400" class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105">
+                    View Showtimes
+                </button>
+                <button class="bg-transparent border-2 border-white hover:bg-white hover:text-black text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">
+                    Explore Cinemas
+                </button>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 scroll-down">
+            <i data-feather="chevron-down" class="h-8 w-8 text-white"></i>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold mb-4">Why Choose CineVerse</h2>
+                <p data-aos="fade-up" data-aos-delay="200" class="text-xl text-gray-300 max-w-3xl mx-auto">Experience the future of cinema with our premium amenities and exceptional service</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div data-aos="fade-up" class="bg-gray-900 p-8 rounded-xl text-center feature-icon">
+                    <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-feather="star" class="h-8 w-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Premium Seating</h3>
+                    <p class="text-gray-400">Luxurious reclining seats with premium comfort for the ultimate movie experience.</p>
+                </div>
+                
+                <div data-aos="fade-up" data-aos-delay="200" class="bg-gray-900 p-8 rounded-xl text-center feature-icon">
+                    <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-feather="monitor" class="h-8 w-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Immersive Sound</h3>
+                    <p class="text-gray-400">Crystal-clear audio with Dolby Atmos for an immersive cinematic experience.</p>
+                </div>
+                
+                <div data-aos="fade-up" data-aos-delay="400" class="bg-gray-900 p-8 rounded-xl text-center feature-icon">
+                    <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-feather="coffee" class="h-8 w-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Premium Dining</h3>
+                    <p class="text-gray-400">Enjoy gourmet food and beverages from our award-winning restaurant.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Movies Section -->
+    <section id="movies" class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold mb-4">Now Showing</h2>
+                <p data-aos="fade-up" data-aos-delay="200" class="text-xl text-gray-300 max-w-3xl mx-auto">Discover the latest blockbusters and acclaimed films</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Movie Card 1 -->
+                <div data-aos="fade-up" class="movie-card bg-gray-800 rounded-xl overflow-hidden transition duration-300">
+                    <div class="relative">
+                        <img src="http://static.photos/movies/640x360/123" alt="Movie Poster" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-bold">PG-13</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="movie-title text-xl font-bold mb-2">Inception</h3>
+                        <div class="flex items-center text-gray-400 mb-3">
+                            <i data-feather="star" class="h-4 w-4 text-yellow-400 mr-1"></i>
+                            <span>8.8/10</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4">A thief who steals corporate secrets through dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.</p>
+                        <button class="w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded-md transition duration-300">
+                            Book Tickets
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Movie Card 2 -->
+                <div data-aos="fade-up" data-aos-delay="100" class="movie-card bg-gray-800 rounded-xl overflow-hidden transition duration-300">
+                    <div class="relative">
+                        <img src="http://static.photos/movies/640x360/456" alt="Movie Poster" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-bold">PG-13</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="movie-title text-xl font-bold mb-2">Dune</h3>
+                        <div class="flex items-center text-gray-400 mb-3">
+                            <i data-feather="star" class="h-4 w-4 text-yellow-400 mr-1"></i>
+                            <span>8.5/10</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4">Paul Atreides, a noble and brilliant young man, becomes the heir to a planet's resources and must navigate complex political intrigue.</p>
+                        <button class="w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded-md transition duration-300">
+                            Book Tickets
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Movie Card 3 -->
+                <div data-aos="fade-up" data-aos-delay="200" class="movie-card bg-gray-800 rounded-xl overflow-hidden transition duration-300">
+                    <div class="relative">
+                        <img src="http://static.photos/movies/640x360/789" alt="Movie Poster" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-bold">PG-13</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="movie-title text-xl font-bold mb-2">Spider-Man: No Way Home</h3>
+                        <div class="flex items-center text-gray-400 mb-3">
+                            <i data-feather="star" class="h-4 w-4 text-yellow-400 mr-1"></i>
+                            <span>8.2/10</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4">With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear.</p>
+                        <button class="w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded-md transition duration-300">
+                            Book Tickets
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Movie Card 4 -->
+                <div data-aos="fade-up" data-aos-delay="300" class="movie-card bg-gray-800 rounded-xl overflow-hidden transition duration-300">
+                    <div class="relative">
+                        <img src="http://static.photos/movies/640x360/101" alt="Movie Poster" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-bold">PG-13</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="movie-title text-xl font-bold mb-2">The Batman</h3>
+                        <div class="flex items-center text-gray-400 mb-3">
+                            <i data-feather="star" class="h-4 w-4 text-yellow-400 mr-1"></i>
+                            <span>7.9/10</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4">In his second year of fighting crime, Batman uncovers corruption in Gotham City that ties to his own family.</p>
+                        <button class="w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded-md transition duration-300">
+                            Book Tickets
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cinemas Section -->
+    <section id="cinemas" class="py-20 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold mb-4">Our Cinemas</h2>
+                <p data-aos="fade-up" data-aos-delay="200" class="text-xl text-gray-300 max-w-3xl mx-auto">Experience cinema at its finest in our premium locations</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Cinema 1 -->
+                <div data-aos="fade-up" class="bg-gray-900 rounded-xl overflow-hidden">
+                    <img src="http://static.photos/cinema/640x360/201" alt="Cinema Location" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Downtown Cinema</h3>
+                        <div class="flex items-center text-gray-400 mb-3">
+                            <i data-feather="map-pin" class="h-4 w-4 mr-2"></i>
+                            <span>123 Main Street, Downtown</span>
+                        </div>
+                        <p class="text-gray-400 mb-4">Our flagship location with 12 screens and premium seating.</p>
+                        <button class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-md transition duration-300">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Cinema 2 -->
+                <div data-aos="fade-up" data-aos-delay="100" class="bg-gray-900 rounded-xl overflow-hidden">
+                    <img src="http://static.photos/cinema/640x360/202" alt="Cinema Location" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Westside Plaza</h3>
+                        <div class="flex items-center text-gray-400 mb-3">
+                            <i data-feather="map-pin" class="h-4 w-4 mr-2"></i>
+                            <span>456 West Avenue, Westside</span>
+                        </div>
+                        <p class="text-gray-400 mb-4">Large venue with luxury recliners and gourmet dining options.</p>
+                        <button class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-md transition duration-300">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Cinema 3 -->
+                <div data-aos="fade-up" data-aos-delay="200" class="bg-gray-900 rounded-xl overflow-hidden">
+                    <img src="http://static.photos/cinema/640x360/203" alt="Cinema Location" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">North Mall</h3>
+                        <div class="flex items-center text-gray-400 mb-3">
+                            <i data-feather="map-pin" class="h-4 w-4 mr-2"></i>
+                            <span>789 North Boulevard, Northside</span>
+                        </div>
+                        <p class="text-gray-400 mb-4">Modern cinema with 3D capabilities and advanced sound systems.</p>
+                        <button class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-md transition duration-300">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">CineWorld</h3>
+                    <p class="text-gray-400">Experience the magic of cinema in premium locations around the city.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Movies</a></li>
+                        <li><a href="#" class="hover:text-white transition">Showtimes</a></li>
+                        <li><a href="#" class="hover:text-white transition">Cinemas</a></li>
+                        <li><a href="#" class="hover:text-white transition">Tickets</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-white transition">FAQs</a></li>
+                        <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="youtube"></i></a>
+                    </div>
+                </div>
+</body>
+</html>

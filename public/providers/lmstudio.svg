@@ -1,0 +1,14 @@
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="lmstudio-gradient" x1="0" y1="0" x2="20" y2="20" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#786FFF"/>
+      <stop offset="1" stop-color="#6C41CD"/>
+    </linearGradient>
+  </defs>
+  <rect width="20" height="20" rx="4" fill="url(#lmstudio-gradient)"/>
+  <rect x="3" y="4" width="11" height="2" rx="1" fill="#ECE7FF" fill-opacity="0.8"/>
+  <rect x="5" y="7" width="10" height="2" rx="1" fill="#ECE7FF" fill-opacity="0.7"/>
+  <rect x="2" y="10" width="13" height="2" rx="1" fill="#ECE7FF" fill-opacity="0.85"/>
+  <rect x="4" y="13" width="8" height="2" rx="1" fill="#ECE7FF" fill-opacity="0.65"/>
+  <rect x="8" y="16" width="7" height="2" rx="1" fill="#ECE7FF" fill-opacity="0.8"/>
+</svg>

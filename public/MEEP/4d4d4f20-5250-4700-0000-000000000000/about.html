@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About - Epic MMO RPG</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body class="bg-gray-900 text-white">
+
+<!-- Navigation Bar -->
+<nav class="fixed w-full z-20 bg-opacity-90 backdrop-blur-md">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+    <a href="#" class="text-2xl font-bold">Epic MMO RPG</a>
+    <div class="hidden md:flex space-x-8">
+      <a href="index.html" class="hover:text-indigo-400 transition">Home</a>
+      <a href="about.html" class="hover:text-indigo-400 transition">About</a>
+      <a href="game.html" class="hover:text-indigo-400 transition">Gameplay</a>
+      <a href="contact.html" class="hover:text-indigo-400 transition">Contact</a>
+    </div>
+    <button id="menuBtn" class="md:hidden focus:outline-none">
+      <i data-feather="menu"></i>
+    </button>
+  </div>
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-gray-800">
+    <a href="index.html" class="block px-4 py-2 hover:bg-indigo-600">Home</a>
+    <a href="about.html" class="block px-4 py-2 hover:bg-indigo-600">About</a>
+    <a href="game.html" class="block px-4 py-2 hover:bg-indigo-600">Gameplay</a>
+    <a href="contact.html" class="block px-4 py-2 hover:bg-indigo-600">Contact</a>
+  </div>
+</nav>
+
+<!-- About Section -->
+<section class="py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
+    <img src="http://static.photos/nature/1024x576/42" alt="World Map" class="w-full md:w-1/2 rounded-lg shadow-xl" data-aos="fade-right">
+    <div class="md:w-1/2">
+      <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">The World of Eldoria</h2>
+      <p class="mb-4" data-aos="fade-up" data-aos-delay="100">
+        Eldoria is a vast realm where magic intertwines with technology, and ancient dragons roam the skies. Players journey through five continents—Aetheria, Drakonia, Sylvanus, Necros, and Terra Nova—each harboring its own lore, challenges, and secrets.
+      </p>
+      <ul class="list-disc list-inside space-y-2" data-aos="fade-up" data-aos-delay="200">
+        <li>Rich Storyline: Uncover the destiny of the chosen hero.</li>
+        <li>Dynamic Ecosystems: Witness day-night cycles and weather effects.</li>
+        <li>Player-driven Economy: Trade, craft, and influence markets.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-800 py-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <p>&copy; 2025 Epic MMO RPG. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+// Feather Icons
+feather.replace();
+
+// AOS initialization
+AOS.init({
+  duration: 800,
+  once: true
+});
+
+// Mobile menu toggle
+document.getElementById('menuBtn').addEventListener('click', () => {
+  const menu = document.getElementById('mobileMenu');
+  menu.classList.toggle('hidden');
+});
+</script>
+</body>
+</html>
