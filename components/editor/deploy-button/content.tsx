@@ -65,9 +65,8 @@ export const DeployButtonContent = ({
         pages,
         prompts,
       });
-      //const projectId = res.data.projectId;
       if (res.data.ok) {
-        router.push(`/projects/${res.data.path}?deploy=true`);
+        router.push(`/projects/${res.data.project.project_id}?deploy=true`);
       } else {
         toast.error(res?.data?.error || "Failed to publish space");
       }
