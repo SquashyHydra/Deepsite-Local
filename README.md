@@ -8,7 +8,7 @@ tested models:
 
 # DeepSite 🐳
 
-DeepSite is a next-generation coding platform powered by DeepSeek AI, designed to make coding smarter and more efficient. It integrates generative AI into your coding projects to enhance creativity and productivity for developers, data scientists, and AI engineers.
+DeepSite-Local is a modern, privacy-friendly coding platform designed for seamless local project development. It empowers you to create, edit, and manage projects entirely on your own machine—no cloud integration, no required login, and no built-in cloud AI. With support for image uploads and optional local LM Studio integration, DeepSite gives you full control over your workflow and data, making it ideal for offline use and local-first development.
 
 ### 📜 Original Project
   - [enzostvs/deepsite](https://huggingface.co/spaces/enzostvs/deepsite/tree/main)
