@@ -82,7 +82,7 @@ npm run start
 
 ## 📅 Stay Updated
 
-- Follow [this discussion](https://github.com/SquashyHydra/Deepsite-Local/issues) for the latest updates, tips, and troubleshooting.
+- Follow [this discussion](https://github.com/SquashyHydra/Deepsite-Local/discussions) for the latest updates, tips, and troubleshooting.
 
 ---
 MIT License | © SquashyHydra
