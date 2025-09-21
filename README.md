@@ -84,7 +84,7 @@ npm run start
 
 - Follow [this discussion](https://github.com/SquashyHydra/Deepsite-Local/discussions) for the latest updates, tips, and troubleshooting.
 
-## Original Project
+## 📜 Original Project
 [enzostvs/deepsite](https://huggingface.co/spaces/enzostvs/deepsite/tree/main)
 
 ---
