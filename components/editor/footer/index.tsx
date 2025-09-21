@@ -105,7 +105,7 @@ export function Footer({
         </a>
         <a
           target="_blank"
-          href="https://huggingface.co/spaces/enzostvs/deepsite/discussions/157"
+          href="https://github.com/SquashyHydra/Deepsite-Local"
         >
           <Button size="sm" variant="outline">
             <HelpCircle className="size-3.5" />
