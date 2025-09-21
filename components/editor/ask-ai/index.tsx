@@ -10,9 +10,7 @@ import { FaStopCircle } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { getLmStudioModels } from "@/lib/providers";
 const MODELS = await getLmStudioModels();
-// console.log(MODELS);
 import { HtmlHistory, Page, Project } from "@/types";
-// import { InviteFriends } from "@/components/invite-friends";
 import { Settings } from "@/components/editor/ask-ai/settings";
 import { ReImagine } from "@/components/editor/ask-ai/re-imagine";
 import Loading from "@/components/loading";
@@ -455,7 +453,6 @@ export function AskAI({
                 </TooltipContent>
               </Tooltip>
             )}
-            {/* <InviteFriends /> */}
           </div>
           <div className="flex items-center justify-end gap-2">
             <Settings
@@ -477,14 +474,6 @@ export function AskAI({
             </Button>
           </div>
         </div>
-        { /* <LoginModal open={open} onClose={() => setOpen(false)} pages={pages} /> */ }
-        { /*}
-        <ProModal
-          pages={pages}
-          open={openProModal}
-          onClose={() => setOpenProModal(false)}
-        />
-        */ }
         {pages.length === 1 && (
           <div className="border border-sky-500/20 bg-sky-500/40 hover:bg-sky-600 transition-all duration-200 text-sky-500 pl-2 pr-4 py-1.5 text-xs rounded-full absolute top-0 -translate-y-[calc(100%+8px)] left-0 max-w-max flex items-center justify-start gap-2">
             <span className="rounded-full text-[10px] font-semibold bg-white text-neutral-900 px-1.5 py-0.5">
