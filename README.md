@@ -85,4 +85,12 @@ npm run start
 - Follow [this discussion](https://github.com/SquashyHydra/Deepsite-Local/discussions) for the latest updates, tips, and troubleshooting.
 
 ---
-MIT License | © SquashyHydra
+
+## Original Project code
+<iframe
+	src="https://enzostvs-deepsite.hf.space"
+	frameborder="0"
+	width="850"
+	height="450"
+></iframe>
+MIT License
