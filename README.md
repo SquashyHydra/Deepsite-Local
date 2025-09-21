@@ -10,6 +10,10 @@ tested models:
 
 DeepSite is a next-generation coding platform powered by DeepSeek AI, designed to make coding smarter and more efficient. It integrates generative AI into your coding projects to enhance creativity and productivity for developers, data scientists, and AI engineers.
 
+### 📜 Original Project
+  - [enzostvs/deepsite](https://huggingface.co/spaces/enzostvs/deepsite/tree/main)
+
+
 ## ✨ Features
 
 - **Local Project Publishing:**
@@ -83,9 +87,6 @@ npm run start
 ## 📅 Stay Updated
 
 - Follow [this discussion](https://github.com/SquashyHydra/Deepsite-Local/discussions) for the latest updates, tips, and troubleshooting.
-
-## 📜 Original Project
-[enzostvs/deepsite](https://huggingface.co/spaces/enzostvs/deepsite/tree/main)
 
 ---
 
