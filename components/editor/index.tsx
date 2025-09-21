@@ -69,6 +69,8 @@ export const AppEditor = ({
   const [selectedElement, setSelectedElement] = useState<HTMLElement | null>(
     null
   );
+  const user = process.env.displayname || "MEEP";
+
   const [selectedFiles, setSelectedFiles] = useState<string[]>([]);
 
   const resetLayout = () => {
@@ -123,18 +125,8 @@ export const AppEditor = ({
 
   useMount(() => {
     if (deploy && project?._id) {
-      toast.success("Your project is deployed! 🎉", {
-        action: {
-          label: "See Project",
-          onClick: () => {
-            window.open(
-              `https://huggingface.co/spaces/${project?.space_id}`,
-              "_blank"
-            );
-          },
-        },
-      });
-      router.replace(`/projects/${project?.space_id}`);
+      toast.success("Your project is deployed! 🎉", {});
+      router.replace(`/projects/${user}/${project?.project_id}`);
     }
     if (htmlStorage) {
       removeHtmlStorage();
