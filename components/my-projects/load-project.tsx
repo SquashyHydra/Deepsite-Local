@@ -25,7 +25,7 @@ export const LoadProject = ({
   fullXsBtn?: boolean;
   onSuccess: (project: Project) => void;
 }) => {
-  const user = process.env.displayname || "Meep";
+  const user = process.env.displayname || "MEEP";
   const router = useRouter();
 
   const [openLoginModal, setOpenLoginModal] = useState(false);
