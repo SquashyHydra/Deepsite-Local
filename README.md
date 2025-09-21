@@ -34,7 +34,7 @@ DeepSite-Local is a modern, privacy-friendly coding platform designed for seamle
   - Seamless loading of existing projects is coming soon.
   - For now, to load a project: create a default project with a name, find the folder in `/public/[displayname]/[encodedname]`, and replace the files inside that folder with your own.
 - **General Improvements:**
-  - Delete Projects from the website
+  - Discuss more in the [discussions](#-stay-updated)
 
 ## 🛠 Requirements
 
