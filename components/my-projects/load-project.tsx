@@ -15,7 +15,6 @@ import { Input } from "../ui/input";
 import { toast } from "sonner";
 import { api } from "@/lib/api";
 import { useUser } from "@/hooks/useUser";
-import { LoginModal } from "../login-modal";
 import { useRouter } from "next/navigation";
 
 export const LoadProject = ({
@@ -100,12 +99,6 @@ export const LoadProject = ({
             Load
             {fullXsBtn && " existing Project"}
           </Button>
-          <LoginModal
-            open={openLoginModal}
-            onClose={setOpenLoginModal}
-            title="Log In to load your Project"
-            description="Log In through Hugging Face to load an existing project and increase your free limit!"
-          />
         </>
       ) : (
         <Dialog open={open} onOpenChange={setOpen}>

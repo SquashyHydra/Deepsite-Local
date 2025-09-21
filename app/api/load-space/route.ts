@@ -19,7 +19,7 @@ export async function GET(req: NextRequest) {
     await fs.access(indexPath);
 
     // Read all files: index.html, style.css, prompts.txt, README.md, .gitattributes
-    const result = {};
+    const result: { [key: string]: string } = {};
     const filesToRead = [
       "index.html",
       "style.css",

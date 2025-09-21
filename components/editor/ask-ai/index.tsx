@@ -7,7 +7,6 @@ import { useLocalStorage, useUpdateEffect } from "react-use";
 import { ArrowUp, ChevronDown, Crosshair } from "lucide-react";
 import { FaStopCircle } from "react-icons/fa";
 
-import ProModal from "@/components/pro-modal";
 import { Button } from "@/components/ui/button";
 import { getLmStudioModels } from "@/lib/providers";
 const MODELS = await getLmStudioModels();
@@ -15,7 +14,6 @@ const MODELS = await getLmStudioModels();
 import { HtmlHistory, Page, Project } from "@/types";
 // import { InviteFriends } from "@/components/invite-friends";
 import { Settings } from "@/components/editor/ask-ai/settings";
-import { LoginModal } from "@/components/login-modal";
 import { ReImagine } from "@/components/editor/ask-ai/re-imagine";
 import Loading from "@/components/loading";
 import { Checkbox } from "@/components/ui/checkbox";
