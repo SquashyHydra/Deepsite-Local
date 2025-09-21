@@ -86,7 +86,7 @@ npm run start
 
 ---
 
-## Original Project code
+## Original Project
 [enzostvs/deepsite](https://huggingface.co/spaces/enzostvs/deepsite/tree/main)
 
 MIT License
