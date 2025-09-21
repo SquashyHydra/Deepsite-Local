@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
+import dbConnect from "@/lib/mongodb";
+import Project from "@/models/Project";
 import path from "path";
 import fs from "fs/promises";
 import { Page } from "@/types";
@@ -103,5 +105,27 @@ export async function PUT(
         return NextResponse.json({ success: true });
     } catch (err) {
         return NextResponse.json({ error: "Failed to save files" }, { status: 500 });
+    }
+}
+
+// DELETE /api/local-projects/[projectId]
+export async function DELETE(
+    req: NextRequest,
+    { params }: { params: { projectId: string } }
+) {
+    const user = process.env.displayname || "MEEP";
+    const { projectId } = params;
+    if (!projectId) {
+        return NextResponse.json({ error: "Missing projectId" }, { status: 400 });
+    }
+    const projectDir = path.join(process.cwd(), "public", user, projectId);
+    try {
+        // Recursively delete the project directory and all its contents
+        await fs.rm(projectDir, { recursive: true, force: true });
+        await dbConnect();
+        await Project.deleteOne({ space_id: `${user}/${projectId}` });
+        return NextResponse.json({ success: true });
+    } catch (err) {
+        return NextResponse.json({ error: "Failed to delete project" }, { status: 500 });
     }
 }

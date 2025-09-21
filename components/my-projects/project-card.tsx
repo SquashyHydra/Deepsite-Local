@@ -73,15 +73,24 @@ export function ProjectCard({ project }: { project: Project }) {
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-56" align="start">
             <DropdownMenuGroup>
-              <a
-                href={""}
-                target="_blank"
+              <DropdownMenuItem
+                onClick={async () => {
+                  if (confirm("Are you sure you want to delete this project?")) {
+                    const res = await fetch(`/api/local-projects/${project.space_id.split("/")[1]}`, {
+                      method: "DELETE",
+                    });
+                    if (res.ok) {
+                      // Optionally, trigger a refresh or remove the card from the list
+                      window.location.reload();
+                    } else {
+                      alert("Failed to delete project.");
+                    }
+                  }
+                }}
               >
-                <DropdownMenuItem>
-                  <Settings className="size-4 text-neutral-100" />
-                  Coming Soon
-                </DropdownMenuItem>
-              </a>
+                <Settings className="size-4 text-neutral-100" />
+                Delete Project
+              </DropdownMenuItem>
             </DropdownMenuGroup>
           </DropdownMenuContent>
         </DropdownMenu>
