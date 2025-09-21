@@ -114,7 +114,7 @@ export async function DELETE(
     { params }: { params: { projectId: string } }
 ) {
     const user = process.env.displayname || "MEEP";
-    const { projectId } = params;
+    const { projectId } = await params;
     if (!projectId) {
         return NextResponse.json({ error: "Missing projectId" }, { status: 400 });
     }
