@@ -20,6 +20,7 @@ export interface Project {
   prompts: string[];
   user_id: string;
   space_id: string;
+  project_id: string;
   _id?: string;
   _updatedAt?: Date;
   _createdAt?: Date;
