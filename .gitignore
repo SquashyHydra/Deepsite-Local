@@ -37,5 +37,11 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# node
+package-lock.json
+
+#database
+/deepsitedb/
+
 #local-projects
 /public/MEEP/
