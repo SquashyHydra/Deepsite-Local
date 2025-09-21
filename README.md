@@ -8,46 +8,81 @@ tested models:
 
 # DeepSite 🐳
 
-DeepSite is a coding platform powered by DeepSeek AI, designed to make coding smarter and more efficient. Tailored for developers, data scientists, and AI engineers, it integrates generative AI into your coding projects to enhance creativity and productivity.
+DeepSite is a next-generation coding platform powered by DeepSeek AI, designed to make coding smarter and more efficient. It integrates generative AI into your coding projects to enhance creativity and productivity for developers, data scientists, and AI engineers.
 
-## What's New
+## ✨ Features
 
 - **Local Project Publishing:**
   - Create and edit entirely on your local machine—no login required.
+- **Image Upload (Beta):**
+  - Upload images to your projects (local).
 - **Local LM Studio Integration:**
-  - Use local AI models (via LM Studio), with automatic model detection.
+  - Use local AI models (via LM Studio) for chat and code generation, with automatic model detection.
+- **UI:**
+  - UI Changes for local project management.
 
-## Requirements
+## 🚧 Roadmap / Known Limitations
 
-- [ MongoDB ](https://www.mongodb.com/try/download/community)
-  - [ installation ](www.mongodb.com/docs/manual/administration/install-community/)
+- **Image Persistence & AI Usage:**
+  - Images uploaded to a project do not persist after reloading the project.
+  - Uploaded images are not yet fed into the AI assistant prompt.
+- **Loading Existing Projects:**
+  - Seamless loading of existing projects is coming soon.
+  - For now, to load a project: create a default project with a name, find the folder in `/public/[displayname]/[encodedname]`, and replace the files inside that folder with your own.
+- **General Improvements:**
+  - Delete Projects from the website
+
+## 🛠 Requirements
+
+- [MongoDB](https://www.mongodb.com/try/download/community)
+  - [Installation Guide](https://www.mongodb.com/docs/manual/administration/install-community/)
 - [LM Studio](https://lmstudio.ai)
 - [Node.js & npm](https://nodejs.org/en/download)
 
-## How to use it locally
+## 🚀 Getting Started
+
+Clone the repository:
 ```bat
 git clone https://github.com/SquashyHydra/Deepsite-Local.git
 ```
+Install dependencies:
 ```bat
 npm install
 ```
-Create the `.env` and add the variables use the [development .env](https://github.com/SquashyHydra/Deepsite-Local/blob/main/.env) as an example
-### development
+Create a `.env` file and add the required variables. Use the [development .env](https://github.com/SquashyHydra/Deepsite-Local/blob/main/.env) as an example.
+
+### Development
 ```bat
 npm run dev
 ```
 ### Build
-```
+```bat
 npm run build
 ```
-### Usage
-```
+### Start
+```bat
 npm run start
 ```
 
-## LM Studio
+## ⚡ LM Studio Notes
 
-Recommanded CUDA version CUDA 12 `v1.48.0`, When i updated to `v1.50.0` gpt oss 20b stopped working but qwen3 coder 30b still worked.
+- Recommended CUDA version: CUDA 12 `v1.48.0`.
+- When updating to `v1.50.0`, `gpt-oss-20b` may stop working, but `qwen3-coder-30b` still works.
 
-## MongoDB
-When if you needed to use `monge+srv://` add it before the `MONGODB=localhost` .env variable like so `MONGODB=monge+srv://localhost`
+## 🗄️ MongoDB Notes
+
+- If you need to use `mongodb+srv://`, add it before the `MONGODB=localhost` variable in your `.env` file, like so: `MONGODB=mongodb+srv://localhost`.
+
+## 🧑‍💻 Troubleshooting
+
+- **Images not persisting:** This is a known limitation; see Roadmap above.
+- **Project loading issues:** Use the manual folder method described above until seamless loading is released.
+- **Model/Provider not available:** Ensure LM Studio is running and the model is loaded.
+- **Other issues:** Please open an issue or discussion on GitHub.
+
+## 📅 Stay Updated
+
+- Follow [this discussion](https://github.com/SquashyHydra/Deepsite-Local/issues) for the latest updates, tips, and troubleshooting.
+
+---
+MIT License | © SquashyHydra
