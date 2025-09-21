@@ -87,10 +87,6 @@ npm run start
 ---
 
 ## Original Project code
-<iframe
-	src="https://enzostvs-deepsite.hf.space"
-	frameborder="0"
-	width="850"
-	height="450"
-></iframe>
+[enzostvs/deepsite](https://huggingface.co/spaces/enzostvs/deepsite/tree/main)
+
 MIT License
